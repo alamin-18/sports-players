@@ -25,7 +25,8 @@ const displayData = (data) => {
     <p>${p?.strDescriptionEN?.slice(0,100)}</p>
     <div class="card-actions justify-end">
       <label for="my_modal_6" class="btn btn-soft btn-info" onclick="playerDetails('${p?.idPlayer}')">Details</label>
-      <button class="btn btn-soft btn-primary">Add Player</button>
+      <button class="btn btn-soft btn-primary"
+      onclick="addPlayer('${p?.strPlayer}')">Add Player</button>
     </div>
   </div>
             `;
@@ -89,8 +90,27 @@ const playerDetails =(player) => {
         modalContainer.appendChild(div);
         const modal = document.getElementById('my_modal_6');
         modal.checked = true;
+        modal.innerHTML = '';
         
     })
+    
+
+}
+let playerCount = 0;
+const playerCountDisplay = document.getElementById('player-count');
+const addPlayer = (name) => {
+    if(playerCount >=11) {
+        alert('You can only add 11 players to your team.');
+        return;
+    }
+    else{
+      playerCount++;
+    playerCountDisplay.innerText = 'Total Added: '+ playerCount;
+    const playName = document.getElementById('player-name');
+    const li = document.createElement('li');
+    li.innerText =playerCount+": "+ name;
+    playName.appendChild(li);
+    }
     
 
 }

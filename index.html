@@ -78,10 +78,25 @@
             
             
         </div>
-        <div id="player-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Player container -->
+       <div class="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-5 ">
+            
+         <div id="player-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 col-span-4">
 
             </div>
+            <div class="col-span-1  ">
+                <h2 class="text-4xl font-bold mb-2 text-center">Player List</h2>
+                <h5 id="player-count" class="text-xl text-center font-bold mb-4">Total Added</h5>
+
+
+                <h3 class="text-3xl text-center">Player Name</h3>
+                <ul id="player-name" class=" mt-4 pl-3"> </ul>
+                    <!-- Player names will be populated here -->
+                
+            </div>
+       </div>
     </section>
+    <!-- modal container -->
     <div id="modal-container">
         
 
