@@ -70,6 +70,12 @@ const playerDetails =(player) => {
     <p>Position: ${p?.strPosition}</p>
     <p>Nationality: ${p?.strNationality}</p>
     <p>Gender: ${p?.strGender}</p>
+    <p>Birth Date: ${p?.dateBorn}</p>
+    <p>Birth Place: ${p?.strBirthLocation}</p>
+    <p>Height: ${p?.strHeight}</p>
+    <p>Weight: ${p?.strWeight}</p>
+    <p>Team: ${p?.strTeam}</p>
+    <p>Sport: ${p?.strSport}</p>
     <p>${p?.strDescriptionEN?.slice(0,500)}</p>
     
   </div>
